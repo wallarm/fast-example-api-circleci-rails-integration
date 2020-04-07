@@ -11,7 +11,7 @@ services:
     environment:
       CAPYBARA_SERVER_HOST: app-test
       WALLARM_API_TOKEN: ${TOKEN}
-      WALLARM_API_HOST: api.wallarm.com
+      WALLARM_API_HOST: us1.api.wallarm.com
     ports:
       - '3000:3000'
     networks:
@@ -22,7 +22,7 @@ services:
     image: wallarm/fast
     environment:
       WALLARM_API_TOKEN: ${TOKEN}
-      WALLARM_API_HOST: api.wallarm.com
+      WALLARM_API_HOST: us1.api.wallarm.com
     ports:
       - '8080:8080'
     networks:
