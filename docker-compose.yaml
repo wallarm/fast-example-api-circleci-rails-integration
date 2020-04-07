@@ -23,6 +23,7 @@ services:
     environment:
       WALLARM_API_TOKEN: ${TOKEN}
       WALLARM_API_HOST: us1.api.wallarm.com
+      CI_MODE: recording
     ports:
       - '8080:8080'
     networks:
