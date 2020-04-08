@@ -41,7 +41,16 @@ module FastHelper
   end
 
   def wait_test_run_for_finish
-    sleep 1 until TEST_RUN_FINAL_STATES.include?(current_test_run['state'])
+    last_msg_time = Time.now
+    while !TEST_RUN_FINAL_STATES.include?(current_test_run['state'])
+      sleep 1
+
+      if (Time.now - last_msg_time) > 60
+        last_msg_time = Time.now
+        msg = "FAST is currently #{current_test_run['state']} (#{current_test_run['finished_checks_count']} checks complete)"
+        puts msg
+      end
+    end
 
     test_run = current_test_run
 
