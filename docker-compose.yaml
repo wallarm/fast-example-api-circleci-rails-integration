@@ -14,6 +14,7 @@ services:
       WALLARM_API_HOST: us1.api.wallarm.com
     ports:
       - '3000:3000'
+    platform: linux/x86_64
     networks:
       main:
         aliases:
