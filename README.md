@@ -6,11 +6,8 @@ Example of integration Wallarm FAST with the rails app using rspec, capybara and
 
 Install docker and docker-compose
 
-Get your UUID and Secret key:
-https://docs.wallarm.com/en/admin-en/api-creds-en.html#get-your-uuid
-
-Create your FAST node here:
-https://my.wallarm.com/nodes
+Create a new Test Run and get WALLARM_API_TOKEN
+https://my.wallarm.com/testing/testruns
 
 ```sh
 export WALLARM_API_TOKEN=<YOUR WALLARM NODE TOKEN>
